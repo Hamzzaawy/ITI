@@ -17,7 +17,7 @@ void MDIO_SetDirection(u8 PORT,u8 Bit,u8 Status)
 				case OUTPUT:		Set_Bit(MDIO_DDRA,Bit);					break;
 				case INPUT_FLOAT:	Clr_Bit(MDIO_DDRA,Bit);					break;
 				case INPUT_PULLUP:	Clr_Bit(MDIO_DDRA,Bit);
-									Set_Bit(MDIO_PORTA,Bit);				break;
+							Set_Bit(MDIO_PORTA,Bit);				break;
 			}
 			break;
 
@@ -27,7 +27,7 @@ void MDIO_SetDirection(u8 PORT,u8 Bit,u8 Status)
 				case OUTPUT: 		 Set_Bit(MDIO_DDRB,Bit);				break;
 				case INPUT_FLOAT:	 Clr_Bit(MDIO_DDRB,Bit);				break;
 				case INPUT_PULLUP:	 Clr_Bit(MDIO_DDRB,Bit);
-									 Set_Bit(MDIO_PORTB,Bit);				break;
+							 Set_Bit(MDIO_PORTB,Bit);				break;
 			}
 			break;
 
@@ -37,7 +37,7 @@ void MDIO_SetDirection(u8 PORT,u8 Bit,u8 Status)
 				case OUTPUT:		 Set_Bit(MDIO_DDRC,Bit);				break;
 				case INPUT_FLOAT:	 Clr_Bit(MDIO_DDRC,Bit);				break;
 				case INPUT_PULLUP:	 Clr_Bit(MDIO_DDRC,Bit);
-									 Set_Bit(MDIO_PORTC,Bit);				break;
+							 Set_Bit(MDIO_PORTC,Bit);				break;
 				}
 				break;
 
@@ -47,7 +47,7 @@ void MDIO_SetDirection(u8 PORT,u8 Bit,u8 Status)
 				case OUTPUT:		 Set_Bit(MDIO_DDRD,Bit);				break;
 				case INPUT_FLOAT:	 Clr_Bit(MDIO_DDRD,Bit);				break;
 				case INPUT_PULLUP:	 Clr_Bit(MDIO_DDRD,Bit);
-									 Set_Bit(MDIO_PORTD,Bit);				break;
+						  	 Set_Bit(MDIO_PORTD,Bit);				break;
 			}
 			break;
 	}
@@ -127,7 +127,7 @@ u8 MDIO_GetPinValue(u8 PORT,u8 Bit)
 	case PORTB:			return GET_Bit(MDIO_PINB,Bit);				break;
 	case PORTC:			return GET_Bit(MDIO_PINC,Bit);				break;
 	case PORTD:			return GET_Bit(MDIO_PIND,Bit);				break;
-	default:			return 0;									break;
+	default:			return 0;						break;
 	}
 
 }
